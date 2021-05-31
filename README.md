@@ -18,6 +18,7 @@ target: более 50 тыс - >50K, менее или равно 50 тыс - <=
     education-num (float)
     age (float)
     hours-per-week (float)
+    capital-gain (float)
 
 Преобразования признаков: OHEEncoder. StandardScaler
 
@@ -26,12 +27,12 @@ target: более 50 тыс - >50K, менее или равно 50 тыс - <=
 
     $ git clone https://github.com/myselfadmirer/Course_project_business_ML.git 
     $ cd Course_project_business_ML 
-    $ docker build -t  .
+    $ docker build -t  myselfadmirer/Course_project_business_ML 
 
 Запускаем контейнер
 
-Здесь хранится предобученная модель (/home/tamara/NELYUBINA/git-project/ML-in-business/lesson9/Course_project_business_ML/app/app)
+Здесь хранится предобученная модель (/home/tamara/NELYUBINA/git-project/ML-in-business/lesson9/Course_project_business_ML/app/models)
 
-$ docker run -d -p 8180:8180 -p 8181:8181 -v /home/tamara/NELYUBINA/git-project/ML-in-business/lesson9/Course_project_business_ML:/app/app/models Course_project_business_ML/gb_docker_flask
+$ docker run -d -p 8180:8180 -p 8181:8181 -v /home/tamara/NELYUBINA/git-project/ML-in-business/lesson9/Course_project_business_ML:/app/models  myselfadmirer/Course_project_business_ML
 
 Переходим на localhost:8181
